@@ -17,7 +17,7 @@ export default function Header(){
                 </span>
                 <div className={styles.numberContent}>
                     <p className={styles.numberCaption}>LLàmanos</p>
-                    <h2 className={styles.number}>(620) 521-6606</h2>
+                    <h2 className={styles.number}>(620) 276-2366</h2>
                 </div>
             </div>
       </header>

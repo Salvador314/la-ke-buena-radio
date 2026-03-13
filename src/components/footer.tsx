@@ -20,9 +20,9 @@ export default function Footer(){
                 <div className={styles.footerSection}>
                     <h3 className={styles.categoryTitle}>Contacto</h3>
                     <ul className={styles.listWrapper}>
-                        <li className={styles.listItem}><Phone size={20}/> <a href="tel:6205216606" className={styles.phoneLink}>(620)521-6606</a></li>
-                        <li className={styles.listItem}><Mail size={20}/> info@lakebuena.com</li>
-                        <li className={styles.listItem}><MapPin size={20}/> 123 calle principal, Garden City, KS, 67846</li>
+                        <li className={styles.listItem}><Phone size={20}/> <a href="tel:6205216606" className={styles.phoneLink}>(620) 276-2366</a></li>
+                        <li className={styles.listItem}><Mail size={20}/>jmartinez@wksradio.com</li>
+                        <li className={styles.listItem}><MapPin size={20}/> 1402 E. Kansas Ave., Garden City, KS, 67846</li>
                     </ul>
                 </div>
                 <div className={styles.footerSection}>
@@ -34,6 +34,7 @@ export default function Footer(){
                         <li className={styles.listItem}><Link href="#anuncios">Avisos</Link></li>
                         <li className={styles.listItem}><Link href="#request">Pide tu musica</Link></li>
                         <li className={styles.listItem}> <Link href="#programacion">Programacion</Link></li>
+                        <li className={styles.listItem}> <Link href="#staff">Facultad</Link></li>
                     </ul>
                 </div>
             </div>

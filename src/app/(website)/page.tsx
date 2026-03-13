@@ -114,7 +114,7 @@ const staff = await client.fetch(STAFF_QUERY)
         </div>
       </section>
 
-      <section className={`${styles.staffSection} ${styles.sectionWrappers}`}>
+      <section id="staff" className={`${styles.staffSection} ${styles.sectionWrappers}`}>
         <header className={styles.sectionHeader}>
             <p className={styles.sectionCaption}>Facultad</p>
             <h2 className={`${styles.sectionTitle} ${styles.styleOneTitle}`}>Nuestro Equipo</h2>
