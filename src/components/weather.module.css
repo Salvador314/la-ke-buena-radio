@@ -1,0 +1,158 @@
+.weatherHeader{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.sectionLabel{
+    font-size: var(--fs-h3);
+    color: var(--accent-color-two);
+    font-weight: 500;
+}
+
+.weatherHeader h2{
+    font-size: var(--fs-h1);
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11), rgb(220, 38, 38));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 800;
+}
+
+.weatherHeader .cityLabel{
+    color: var(--text-secondary-color);
+}
+
+.weatherMain{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+}
+
+.mainReportWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    width: 80%;
+    min-width: fit-content;
+    gap: var(--space-md);
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border: 2px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 
+                linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11), rgb(220, 38, 38)) border-box;
+    border-radius: var(--border-radius);
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.temperature img{
+    width: 15rem;
+}
+
+.temperature h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.temperature p{
+    font-size: var(--fs-h3);
+    color: var(--text-secondary-color);
+}
+
+.tempDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tempAdditional {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tempAdditional p{
+    font-size: var(--fs-h2);
+}
+
+.tempAdditional span{
+    color: var(--text-secondary-color);
+}
+
+@media (max-width: 768px) {
+    .mainReportWrapper{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px){
+    .mainReportWrapper {
+        flex-direction: column;
+        padding: var(--space-sm);
+        max-width: fit-content;
+    }
+
+    .weatherMain{
+        gap: var(--space-md);
+    }
+
+    .weatherHeader{
+        padding: 0 var(--space-sm);
+        gap: var(--space-sm);
+    }
+    
+    .sectionLabel{
+        font-size: var(--fs-h4);
+    }
+    
+    .weatherHeader h2{
+        font-size: var(--fs-h2);
+    }
+    .temperature h1{
+        font-size: var(--space-lg);
+    }
+
+    .tempDetails {
+        gap: var(--space-xs);
+    }
+
+    .temperature img{
+        width: 10rem;
+    }
+    .temperature {
+        gap: 0;
+    }
+    .tempAdditional {
+        padding: var(--space-xs);
+    }
+    .tempAdditional p{
+        font-size: var(--fs-h4);
+    }
+}

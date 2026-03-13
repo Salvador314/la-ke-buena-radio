@@ -1,0 +1,63 @@
+.scheduleRow {
+    display: flex;
+    justify-content: space-between; /* This pushes the two divs to opposite sides */
+    align-items: center;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+
+    border: 2px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 
+                linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11), rgb(220, 38, 38)) border-box;
+    border-radius: var(--border-radius);
+}
+
+.showInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.showTitle{
+    font-weight: bold;
+    font-size: var(--fs-h3);
+}
+
+.speakers{
+    color: var(--accent-color-two);
+    font-size: var(--fs-body);
+}
+
+.timeRange{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xs);
+    background: linear-gradient(to right, rgb(245, 158, 11), rgb(245, 158, 11), rgb(220, 38, 38));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+    font-size: var(--fs-body);
+}
+
+.micIcon{
+    padding: var(--space-sm);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .scheduleRow{
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+}

@@ -1,0 +1,132 @@
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    max-width: max-content;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    
+    border: 2px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 
+                linear-gradient(to right, rgb(79 145 248), rgb(20, 184, 166), rgb(79 145 248)) border-box;
+    border-radius: var(--border-radius);
+}
+
+.label{
+    font-size: var(--fs-h3);
+    color: var(--text-secondary-color);
+}
+
+.input:focus{
+    border-color: rgb(245, 158, 11); /* One of your brand colors */
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    /* This creates a soft orange glow around the box */
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.3), 
+                inset 0 0 5px rgba(245, 158, 11, 0.1);
+    
+    transform: translateY(-2px); /* Subtle "lift" effect */
+}
+
+.name{
+    width: 100%;
+    font-size: var(--fs-h3);
+    padding: var(--space-xs);
+}
+
+.artistContent{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-sm);
+    width: 100%;
+}
+
+.songInfo, .artistInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.song, .artist{
+    font-size: var(--fs-h3);
+    padding: var(--space-xs);
+}
+
+.message{
+    font-size: var(--fs-h3);
+    width: 100%;
+    padding: var(--space-xs);
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formButton{
+    padding: var(--space-sm);
+    border-radius: var(--border-radius);
+    max-width: fit-content;
+    font-size: var(--fs-h4);
+    background: linear-gradient(to bottom right, rgb(79 145 248), rgb(20, 184, 166), rgb(79 145 248));
+    font-weight: 600;
+    color: var(--text-dark-color);
+    transition: 200ms transform;
+}
+
+.formButton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-position: right center;
+    box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+}
+
+.statusWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.successMsg{
+    color: var(--icon-color-two);
+    font-size: var(--fs-h4);
+}
+
+.errorMsg{
+    font-size: var(--fs-h4);
+    color: var(--accent-color-one);
+}
+
+@media (max-width: 576px) {
+    .label{
+        font-size: var(--fs-h4);
+        color: var(--text-secondary-color);
+    }
+    
+    .name{
+        font-size: var(--fs-h4);
+    }
+
+    .song, .artist{
+        font-size: var(--fs-h4);
+    }
+    
+    .message{
+        font-size: var(--fs-h4);
+    }
+    .formButton{
+        padding: var(--space-xs);
+        font-size: var(--fs-body);
+    }
+
+    .artistContent{
+        flex-direction: column;
+    }
+}

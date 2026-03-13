@@ -1,0 +1,209 @@
+.staffSection {
+    text-align: center;
+}
+
+.staffGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    justify-content: center;
+    max-width: 100%;
+    padding: 0;
+}
+
+.staffCard {
+    background: #111;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.staffCard:hover {
+    transform: translateY(-10px); /* Lift effect */
+}
+
+/* Image Wrapper and Overlay Logic */
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 3/4; /* Keeps all photos the same size */
+    overflow: hidden;
+}
+
+.staffImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.6s ease;
+}
+
+.staffCard:hover .staffImage {
+    scale: 1.1; /* Subtle zoom on hover */
+}
+
+.cardOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Dark tint */
+    backdrop-filter: blur(10px); /* Glass effect */
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: all 0.4s ease;
+    border-radius:var(--border-radius) var(--border-radius) 0 0 ;
+    padding: var(--space-xs);
+    z-index: 2;;
+}
+
+.staffCard:hover .cardOverlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Show Info Styling */
+.showInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+.onAirBadge {
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11));
+    color: white;
+    padding: 2px 8px;
+    max-width: fit-content;
+    border-radius: var(--border-radius);
+    font-size: var(--fs-caption);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.showDetails{
+    font-size: var(--fs-h4);
+    text-transform:capitalize;
+}
+
+/* Ensure the container doesn't collapse */
+.socialLinks {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+.platformLabel{
+    font-size: var(--fs-caption);
+    text-transform: capitalize;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLinks a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+    /* This makes the icon itself use your gradient */
+    color: rgb(245, 158, 11);
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}
+
+/* Add this specific rule for the SVGs */
+.socialLinks a svg {
+    width: var(--space-md);   /* or any size you like */
+    height: var(--space-md);
+    display: block;
+}
+
+
+/* Bottom Metadata (Always visible) */
+.memberMeta {
+    padding: var(--space-xs);
+    background: #111;
+    border: 2px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 
+                linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11), rgb(220, 38, 38)) border-box;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.memberMeta h3 {
+    margin: 0;
+    font-size: var(--fs-h3);
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(245, 158, 11), rgb(220, 38, 38));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 500;
+    letter-spacing: var(--space-3xs);
+    text-transform: capitalize;
+}
+
+.memberMeta span {
+    font-size: var(--fs-caption);
+    color: var(--text-secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 576px){
+    .staffGrid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+        gap: var(--space-sm);
+    }
+
+    .memberMeta h3 {
+        font-size: var(--fs-h4);
+    }
+
+    .memberMeta span {
+        font-size: 0.7rem;
+    }
+
+    .showDetails{
+        font-size: var(--fs-caption);
+    }
+
+    .socialLinks a svg {
+        width: 1.2rem;   /* or any size you like */
+        height: 1.2rem;
+    }
+
+    .platformLabel{
+        font-size: 0.5rem;
+    }
+
+    .socialLinks{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        padding: var(--space-sm);
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        gap:var(--space-xs);
+    }
+
+    .cardOverlay{
+        gap: var(--space-3xs);
+    }
+
+    .showInfo {
+        margin-bottom: 0;
+        gap: var(--space-2xs);
+    }
+}

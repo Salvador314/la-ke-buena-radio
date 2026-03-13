@@ -1,0 +1,106 @@
+.annContent {
+    min-height: var(--space-md); /* Better than a percentage height */
+    height: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    padding: var(--space-sm);
+    animation: fadeIn 0.5s ease-out forwards;
+
+    border: 2px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 
+                linear-gradient(to right, rgb(79 145 248), rgb(20, 184, 166), rgb(79 145 248)) border-box;
+    border-radius: var(--border-radius);
+}
+
+.mainRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    background: #fef2f2; /* Light red background */
+    color: #dc2626;      /* Brand red icon */
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.annCategory{
+    font-size: var(--fs-caption);
+    font-weight: 600;
+}
+
+.date{
+    font-size: var(--fs-caption);
+    color: var(--text-secondary-color);
+}
+
+.annInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1; /* Pushes the dropdown button to the far right */
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+.annTitle{
+    font-size: var(--fs-h4);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    display: block;
+    width: 100%;
+}
+
+.annLabels {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    text-transform: capitalize;
+    flex-wrap: wrap;
+}
+
+.dropButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary-color);
+    padding: var(--space-sm);
+    transition: transform 0.2s;
+}
+
+.descriptionContent {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid #eee;
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    color: var(--text-secondary-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}

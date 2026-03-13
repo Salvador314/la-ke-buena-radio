@@ -1,0 +1,92 @@
+.footerWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding: var(--space-2xl) var(--space-lg);
+    background-color: rgb(0, 0, 0);
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: var(--space-2xl);
+}
+
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-sm);
+}
+
+.logoWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-md);
+}
+
+.logoInfo{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.radioCaption{
+    color: var(--accent-color-two);
+}
+
+.description{
+    font-size: var(--fs-body);
+    color: var(--text-secondary-color);
+}
+
+.image{
+    width: 8rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.listWrapper{
+    line-height: var(--space-md);
+    list-style: none;
+    color: var(--text-secondary-color);
+}
+
+.listItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-body);
+}
+
+.phoneLink{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.break{
+    height: 0.1rem;
+    width: 100%;
+    opacity: 0.5;
+    border-radius: var(--border-radius);
+    background: linear-gradient(to right,rgba(177, 183, 191, 0), rgba(177, 183, 191, 1), rgba(177, 183, 191, 0));
+}
+
+.copyright{
+    color: var(--text-secondary-color);
+    opacity: 0.5;
+}
+
+@media (max-width: 576px){
+    .footerContent{
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+}
