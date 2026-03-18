@@ -14,7 +14,8 @@ export default{
             name: 'position',
             title: 'Posicion',
             type: 'string',
-            description: 'ej, Locutor, Secretaria, Directora'
+            description: 'ej, Locutor, Secretaria, Directora',
+            validation: (rule: Rule) => rule.max(60).warning('Longer Titles might get cut off on mobile!')
         },
         {
             name: 'image',

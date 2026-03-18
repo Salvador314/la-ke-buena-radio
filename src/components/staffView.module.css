@@ -17,6 +17,10 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .staffCard:hover {
@@ -133,6 +137,10 @@
 /* Bottom Metadata (Always visible) */
 .memberMeta {
     padding: var(--space-xs);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #111;
     border: 2px solid transparent;
     background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, 

@@ -1,4 +1,6 @@
+'use client';
 import { urlFor } from "@/sanity/lib/image";
+import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import{
     faInstagram,
@@ -11,6 +13,12 @@ import { faLink, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import styles from './staffView.module.css'
 
 export default function StaffGrid({ staffData }: any){
+    const [expandedId, setExpandedId] = useState<string | null>(null);
+
+    const toggleExpand = (id: string) => {
+        setExpandedId(expandedId === id ? null : id);
+    };
+
     return(
         <section id="staff" className={styles.staffSection}>
             <div className={styles.staffGrid}>
@@ -52,9 +60,16 @@ export default function StaffGrid({ staffData }: any){
                         </div>
 
                         {/* Permanent Info (Visible even without hover) */}
-                        <div className={styles.memberMeta}>
+                        <div className={styles.memberMeta} onClick={() => toggleExpand(member._id)}>
                             <h3>{member.name}</h3>
-                            <span>{member.position}</span>
+                            <span className={expandedId === member._id ? styles.expanded : styles.positionText}>
+                                {member.position}
+                            </span>
+                            {member.position?.length > 40 && (
+                                <button className={styles.readMoreBtn}>
+                                    {expandedId === member._id ? 'Show Less' : '...'}
+                                </button>
+                            )}
                         </div>
                     </div>
                 ))}
