@@ -13,7 +13,6 @@ export default function SocialSideBar(){
         {icon: <SiFacebook size={25}/>, link: 'https://www.facebook.com/la.ke.buena.kansas', color: '#1877F2', label: 'Facebook'},
         {icon: <SiInstagram size={25}/>, link: 'https://www.instagram.com/buenakansas/', color: '#E4405F', label: 'Instagram'},
         {icon: <SiX size={25}/>, link: 'https://twitter.com', color: '#000000', label: 'twitter'},
-        {icon: <SiYoutube size={25}/>, link: 'https://youtube.com', color:'FF0000', label: 'Youtube'},
     ];
 
     return(
