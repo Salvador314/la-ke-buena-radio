@@ -4,12 +4,12 @@
 
 .staffGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
     justify-content: center;
     max-width: 100%;
-    padding: 0;
+    padding: 0 var(--space-md);
 }
 
 .staffCard {
