@@ -7,8 +7,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
     -webkit-mask-image: linear-gradient(to bottom, rgb(15 5 5) 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, rgb(15 5 5) 80%, transparent 100%);
+    aspect-ratio: 16/9;
+    overflow: hidden;
     transition: background-image 800ms ease-in-out; 
     position: relative;
 }
