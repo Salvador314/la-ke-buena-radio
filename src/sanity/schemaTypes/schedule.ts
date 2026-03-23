@@ -18,6 +18,14 @@ export default{
             description: 'list of speakers live (e.g., con Ernesto & Ricardo)'
         },
         {
+            name: "mobileImage",
+            title: "Mobile Background Image",
+            type: "image",
+            options:{
+                hotspot: true,
+            }
+        },
+        {
             name: 'startTime',
             type: 'string',
             title: 'Start Time',

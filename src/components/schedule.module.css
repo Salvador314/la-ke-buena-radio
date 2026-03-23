@@ -59,5 +59,16 @@
     .scheduleRow{
         flex-direction: column;
         gap: var(--space-sm);
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    var(--mb-bg) center/cover no-repeat;
+        
+        /* Optional: Add a slight blur to the background image */
+        backdrop-filter: blur(2px);
+    }
+
+    .showTitle, .speakers, .timeRange{
+        position: relative;
+        z-index: 2;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
     }
 }

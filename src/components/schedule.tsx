@@ -1,5 +1,6 @@
 import styles from './schedule.module.css';
 import { MicVocal } from 'lucide-react';
+import { urlFor } from '../sanity/lib/image';
 
 interface ShowProps{
     show: {
@@ -13,8 +14,11 @@ interface ShowProps{
 }
 
 export default function Schedule({show, bgColor} : any){
+    const mobileBgUrl = show.mobileImage
+        ? urlFor(show.mobileImage).width(800).url() : '';
+
     return (
-        <div className={styles.scheduleRow}>
+        <div className={styles.scheduleRow} style={{'--mb-bg': `url(${mobileBgUrl})`} as React.CSSProperties}>
             <div className={styles.showInfo}>
                 <span style={{backgroundColor: bgColor}} className={styles.micIcon}><MicVocal size={30}/></span>
                 <div className={styles.showContent}>
