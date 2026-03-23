@@ -19,7 +19,7 @@ export default function HeroCarousel({slides}: any){
 
     const current = slides[index]
 
-    const bgImageUrl = current?.image ? urlFor(current.image).url() : '/fallback-hero.jpg';
+    const bgImageUrl = current?.image ? urlFor(current.image).width(1920).height(1080).fit('crop').auto('format').url() : '/fallback-hero.jpg';
 
     return(
         <section className={styles.heroSection} style={{backgroundImage: bgImageUrl ? `url(${bgImageUrl})` : 'none'}}>
