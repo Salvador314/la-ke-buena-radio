@@ -170,8 +170,9 @@
 
 @media (max-width: 576px){
     .staffGrid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+        grid-template-columns: repeat(auto-fit, minmax(90px, 150px));
         gap: var(--space-sm);
+        padding: 0 var(--space-sm);
     }
 
     .onAirBadge{
