@@ -76,7 +76,7 @@
     cursor: pointer;
     color: var(--text-secondary-color);
     padding: var(--space-sm);
-    transition: transform 0.2s;
+    transition: transform 200ms;
 }
 
 .descriptionContent {
@@ -86,7 +86,7 @@
     font-size: var(--fs-body);
     line-height: 1.5;
     color: var(--text-secondary-color);
-    animation: slideDown 0.3s ease-out;
+    animation: slideDown 500ms ease-out;
 }
 
 @keyframes slideDown {
