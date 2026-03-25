@@ -21,7 +21,7 @@ export default function Footer(){
                     <h3 className={styles.categoryTitle}>Contacto</h3>
                     <ul className={styles.listWrapper}>
                         <li className={styles.listItem}><Phone size={20}/> <a href="tel:6205216606" className={styles.phoneLink}>(620) 276-2366</a></li>
-                        <li className={styles.listItem}><Mail size={20}/>jmartinez@wksradio.com</li>
+                        <li className={styles.listItem}><Mail size={20}/>rfranco@wksradio.com</li>
                         <li className={styles.listItem}><MapPin size={20}/> 1402 E. Kansas Ave., Garden City, KS, 67846</li>
                     </ul>
                 </div>
