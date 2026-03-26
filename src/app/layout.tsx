@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "La Ke Buena Radio",
-  description: "",
+  description: "Escucha La Ke Buena en vivo. Disfruta de la mejor programación, locutores destacados y las últimas noticias de la comunidad en Garden City. ¡Sintonízanos ya!",
 };
 
 export default function GlobalLayout({
